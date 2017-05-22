@@ -24,6 +24,10 @@ class FeedTableViewController: UITableViewController {
             photos.insert(PhotoData(userName: "TestName", likes: 50) , at: 0)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

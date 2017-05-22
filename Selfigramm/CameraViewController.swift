@@ -29,13 +29,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("didFinishPickingMediaWithInfo")
-        print("info - \(info)")
+//        print("didFinishPickingMediaWithInfo")
+//        print("info - \(info)")
         self.dismiss(animated: true, completion: nil)
 //        photoImageView.image = imagePicker?.takePicture()
         photoImageView!.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-        print("photoIV.image - \(photoImageView!.image!)")
+//        print("photoIV.image - \(photoImageView!.image!)")
         DataManager.sharedInstance.addPhoto(image: photoImageView!.image!)
     }
 

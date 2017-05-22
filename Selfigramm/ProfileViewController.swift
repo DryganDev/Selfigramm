@@ -27,6 +27,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegateFlowLayou
         collectionView.backgroundColor = collectionView.backgroundColor?.withAlphaComponent(0)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
